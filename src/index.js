@@ -11,7 +11,7 @@ const verifyRepoConfig = async (repo, context) => {
 
 module.exports.workspaceActions = [{
   label: 'Repo Sync - Export Workspace',
-  icon: 'fa-download',
+  icon: 'fa-upload',
   action: async (context, models) => {
     const repo = new WorkspaceRepo(context);
     if (!await verifyRepoConfig(repo, context)) return;
@@ -28,7 +28,7 @@ module.exports.workspaceActions = [{
 },
 {
   label: 'Repo Sync - Import Workspace',
-  icon: 'fa-upload',
+  icon: 'fa-download',
   action: async (context, models) => {
     const repo = new WorkspaceRepo(context);
     if (!await verifyRepoConfig(repo, context)) return;
