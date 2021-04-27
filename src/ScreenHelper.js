@@ -7,7 +7,7 @@ class ScreenHelper {
   static async askRepoPath(context, options={}) {
     await context.app.alert(
       'Select repository',
-      `Chose the repository to synchronize your workspace\nCurrent path: ${options.currentPath}`
+      `Choose the repository to synchronize your workspace\nCurrent path: ${options.currentPath}`
     );
     const path = await context.app.showSaveDialog({defaultPath: options.workspaceName});
 
